@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #root {
-	@apply m-0 p-0 max-w-full !important;
+	@apply m-0 p-0 max-w-full selection:bg-blue-200 !important;
 }
 
 /* Sidebar */
