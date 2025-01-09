@@ -1,11 +1,12 @@
 import { ReactNode, useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
 	const [showMenu, setShowMenu] = useState<boolean>(false);
 	const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 	const menuRef = useRef<HTMLDivElement>(null);
 	const sidebarRef = useRef<HTMLDivElement>(null);
+	const location = useLocation();
 
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
@@ -18,6 +19,12 @@ const Sidebar = () => {
 		return () => {
 			document.removeEventListener("mousedown", handleClickOutside);
 		};
+	}, []);
+
+	useEffect(() => {
+		console.log(location.pathname);
+
+		return () => {};
 	}, []);
 
 	return (
