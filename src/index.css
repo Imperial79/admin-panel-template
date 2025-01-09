@@ -29,3 +29,19 @@
 		transform: translateY(0);
 	}
 }
+
+.circleAvatar {
+	@apply bg-white rounded-full overflow-clip h-10 w-10;
+}
+
+input {
+	@apply p-2 border rounded-lg w-full;
+}
+
+label {
+	@apply text-[14px] mb-2 font-medium tracking-[1px];
+}
+
+button {
+	@apply rounded-lg text-blue-800 bg-blue-200 hover:bg-blue-300 hover:text-black font-medium;
+}

@@ -7,6 +7,7 @@ const Sidebar = () => {
 	const menuRef = useRef<HTMLDivElement>(null);
 	const sidebarRef = useRef<HTMLDivElement>(null);
 	const location = useLocation();
+	const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
@@ -22,13 +23,15 @@ const Sidebar = () => {
 	}, []);
 
 	useEffect(() => {
-		console.log(location.pathname);
-
-		return () => {};
-	}, []);
+		if (location.pathname === "/login") {
+			setShowSidebar(false);
+		} else {
+			setShowSidebar(true);
+		}
+	}, [location]);
 
 	return (
-		<>
+		<div className={`${showSidebar ? "block" : "hidden"}`}>
 			{/* Toggle Button for Mobile */}
 			<button
 				onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -181,7 +184,7 @@ const Sidebar = () => {
 					className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"
 				/>
 			)}
-		</>
+		</div>
 	);
 };
 
