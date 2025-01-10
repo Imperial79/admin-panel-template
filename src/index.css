@@ -6,6 +6,10 @@
 	@apply m-0 p-0 max-w-full selection:bg-blue-200 !important;
 }
 
+body {
+	@apply bg-black;
+}
+
 /* Sidebar */
 
 .activeBtn {
@@ -44,4 +48,8 @@ label {
 
 button {
 	@apply rounded-lg text-blue-800 bg-blue-200 hover:bg-blue-300 hover:text-black font-medium;
+}
+
+.menuButton {
+	@apply p-2 hover:bg-gray-200 w-full bg-white text-black text-start;
 }

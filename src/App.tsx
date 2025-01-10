@@ -11,7 +11,7 @@ function App() {
 				<Sidebar />
 				<div
 					id="content"
-					className="w-full bg-gray-100 overflow-auto min-h-screen"
+					className="flex-1 bg-scaffold overflow-auto m-4 rounded-3xl"
 				>
 					<Routes>
 						<Route path="/" element={<DashboardUI />} />
