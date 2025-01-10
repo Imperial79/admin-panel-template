@@ -4,15 +4,15 @@ const LoginUI = () => {
 	const [showPassword, setShowPassword] = useState<boolean>(false);
 	return (
 		<div className="relative min-h-screen flex flex-col lg:flex-row">
-			<div className="flex-1 flex items-center justify-center p-4 lg:p-0">
-				<div className="text-center flex flex-col items-center">
+			<div className="flex-1 flex-grow flex items-center justify-center p-4 lg:p-0">
+				<div className="text-center flex flex-col items-center text-white">
 					<div className="circleAvatar mb-5"></div>
 					<h1 className="text-4xl font-bold mb-4">Welcome to Our Platform</h1>
 					<p className="text-lg">Please log in to continue</p>
 				</div>
 			</div>
 			<div className="flex-1 flex items-center justify-center p-4 lg:p-0">
-				<div className="w-full max-w-md bg-white border rounded-[30px] p-6 flex flex-col items-start">
+				<div className="w-full max-w-md bg-white border rounded-[30px] md:p-7 p-6 flex flex-col items-start">
 					<h2 className="font-medium text-xl mb-5">Enter login details</h2>
 
 					<label htmlFor="username">Username</label>
@@ -64,7 +64,23 @@ const LoginUI = () => {
 						</button>
 					</div>
 
-					<button className="w-full p-2 mt-5">Proceed</button>
+					<button className="w-full p-3 mt-5 bg-black text-white hover:bg-gray-700 hover:text-white flex items-center justify-between">
+						<p>Proceed</p>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							strokeWidth={1.5}
+							stroke="currentColor"
+							className="size-5"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+							/>
+						</svg>
+					</button>
 				</div>
 			</div>
 		</div>

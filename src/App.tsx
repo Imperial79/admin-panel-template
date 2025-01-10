@@ -9,13 +9,10 @@ function App() {
 		<BrowserRouter>
 			<div className="flex">
 				<Sidebar />
-				<div
-					id="content"
-					className="flex-1 bg-scaffold overflow-auto m-4 rounded-3xl"
-				>
+				<div id="content" className="flex-1">
 					<Routes>
-						<Route path="/" element={<DashboardUI />} />
 						<Route path="/login" element={<LoginUI />} />
+						<Route path="/" element={<DashboardUI />} />
 					</Routes>
 				</div>
 			</div>
