@@ -44,7 +44,7 @@ const Sidebar = () => {
 			<aside
 				ref={sidebarRef}
 				id="sidebar"
-				className={`select-none fixed top-0 left-0 h-screen text-white w-[320px] transform transition-transform duration-300 ease-in-out z-40 ${
+				className={`select-none fixed top-0 left-0 h-screen text-white w-[270px] transform transition-transform duration-300 ease-in-out z-40 ${
 					isSidebarOpen ? "translate-x-0" : "-translate-x-full"
 				} lg:translate-x-0 lg:relative flex flex-col`}
 			>
